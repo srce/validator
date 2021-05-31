@@ -21,7 +21,8 @@ func main() {
 		Message: "Oops!",
 	}
 
-	ok, errs := user.Valid()
-	fmt.Printf("validation: %v %v", ok, errs)
+	valid, errs := user.Valid()
+	// validation: false map[email:field required message:too short name:field required]
+	fmt.Printf("validation: %v %v\n", valid, errs)
 }
 ```
